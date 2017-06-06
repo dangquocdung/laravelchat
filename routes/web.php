@@ -16,4 +16,5 @@ Route::get('/', function () {
 });
 
 Route::get('/send-messages', 'RedisController@index');
+
 Route::post('/send-messages', 'RedisController@postSendMessage');
