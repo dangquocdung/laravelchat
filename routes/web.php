@@ -15,6 +15,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/send-messages', 'RedisController@index');
+Route::get('/send-message', 'RedisController@index');
 
-Route::post('/send-messages', 'RedisController@postSendMessage');
+Route::post('/send-message', 'RedisController@postSendMessage');
