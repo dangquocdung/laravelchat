@@ -1,4 +1,4 @@
-var io = require('socketio')(6000)
+var io = require('socket.io')(6000)
 console.log('Connected to port 6000')
 
 io.on('error',function(socket){
