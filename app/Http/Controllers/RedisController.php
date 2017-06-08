@@ -22,7 +22,7 @@ class RedisController extends Controller
       $messages = Messages::create($request->all());
 
       event(
-    		$e = new RedisEvent($messages);
+    		$e = new RedisEvent($messages)
     	);
 
       return redirect()->back();
