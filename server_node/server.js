@@ -11,3 +11,9 @@ io.on('connection',function(socket){
 
 var Redis = require('ioredis')
 var redis = new Redis(6379)
+
+redis.on('pmessage',function(partner, channel, message){
+  console.log(channel);
+  console.log(message);
+  console.log(partner);
+})
