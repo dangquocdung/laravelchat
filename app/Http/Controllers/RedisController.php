@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Messages;
+use App\Events\RedisEvent;
 
 class RedisController extends Controller
 {
@@ -21,7 +22,7 @@ class RedisController extends Controller
       $messages = Messages::create($request->all());
 
       event(
-    		$e = new RedisEvent($messages)
+    		$e = new RedisEvent($messages);
     	);
 
       return redirect()->back();
