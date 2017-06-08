@@ -20,9 +20,11 @@ class RedisEvent
      *
      * @return void
      */
-    public function __construct()
+    public $message;
+    public function __construct(Messages $message)
     {
         //
+        $this->message = $message;
     }
 
     /**
@@ -32,6 +34,13 @@ class RedisEvent
      */
     public function broadcastOn()
     {
-        return new PrivateChannel('channel-name');
+        // return new PrivateChannel('channel-name');
+        return ['chat'];
+    }
+
+    public function broadcastAs()
+    {
+        // return new PrivateChannel('channel-name');
+        return 'message';
     }
 }
