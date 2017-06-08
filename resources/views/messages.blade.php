@@ -22,16 +22,16 @@
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.1/socket.io.js"></script>
         <script>
 
-        var socket = io('http://localhost:6379')
-        // socket.on('chat:message',function(data){
-        //     //console.log(data)
-        //     if($('#'+data.id).length == 0){
-        //         $('#data').append('<p><strong>'+data.author+'</strong>: '+data.content+'</p>')
-        //     }
-        //     else{
-        //         console.log('Đã có tin nhắn')
-        //     }
-        // })
+          var socket = io('http://27.72.47.236:6379')
+          // socket.on('chat:message',function(data){
+          //     //console.log(data)
+          //     if($('#'+data.id).length == 0){
+          //         $('#data').append('<p><strong>'+data.author+'</strong>: '+data.content+'</p>')
+          //     }
+          //     else{
+          //         console.log('Đã có tin nhắn')
+          //     }
+          // })
 
         </script>
     </div>
